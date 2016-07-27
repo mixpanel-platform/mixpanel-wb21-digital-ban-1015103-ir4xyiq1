@@ -1,4 +1,5 @@
 var dauQuery = function(){
+
     // get jql script params for active users query, return result is daus this month
     var newDAUActiveUserScript = $('#jql-dau-active-users').html();
     newDAUActiveUserScript = $.trim(newDAUActiveUserScript);

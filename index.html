@@ -67,11 +67,12 @@
                   <div class="panel-heading">
                       <div class="row">
                           <div class="col-xs-3">
-                              <i class="fa fa-users fa-4x" aria-hidden="true"></i>
+                              <i class="fa fa-exchange fa-4x" aria-hidden="true"></i>
+                              <!-- <i class="fa fa-users fa-4x" aria-hidden="true"></i> -->
                           </div>
                           <div class="col-xs-9 text-right">
                               <div class="huge" id="dau-header">0</div>
-                              <div class="panel-text">Daily Active Users Today</div>
+                              <div class="panel-text">Transfers Today</div>
                           </div>
                       </div>
                   </div>
@@ -214,6 +215,16 @@
       <div class="row">
         <div class="row" id="headers">
           <div class="col-sm-12">
+            <h4 class="text-center text-muted" id="returning-users-header" style="diplay: none;"><u>Returing Users</u></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id='returning-users-graph'></div>
+          </div>
+        </div>
+        <div class="row" id="headers">
+          <div class="col-sm-12">
             <h4 class="text-center text-muted" id="avg-campaign-header" style="diplay: none;"><u>Avg. Events Per User By Campaign</u></h4>
           </div>
         </div>
@@ -240,6 +251,26 @@
         <div class="row">
           <div class="col-sm-12">
             <div id='campaign-bounce-rate'></div>
+          </div>
+        </div>
+        <div class="row" id="headers">
+          <div class="col-sm-12">
+            <h4 class="text-center text-muted" id="transfer-header" style="diplay: none;"><u>Daily Transfers</u></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id='transfer-graph'></div>
+          </div>
+        </div> 
+        <div class="row" id="headers">
+          <div class="col-sm-12">
+            <h4 class="text-center text-muted" id="transfer-amounts-header" style="diplay: none;"><u>Daily Transfer Amounts</u></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id='transfer-amounts-graph'></div>
           </div>
         </div>    
       </div>      
@@ -541,6 +572,8 @@
     <script type="text/javascript" src="js/revenueHeader.js"></script>   
     <!-- marketing table graph -->
     <script type="text/javascript" src="js/marketingTable.js"></script>
+    <!-- returning Users-->
+    <script type="text/javascript" src="js/returningUsers.js"></script>
     <!-- link to avg events per user per campaign per day graphing -->
     <script type="text/javascript" src="js/avgEventsPerCampaingGraphing.js"></script>
     <!-- avg events per user per day graphing -->
@@ -549,6 +582,8 @@
     <script type="text/javascript" src="js/tableEdit.js"></script>
     <!-- bounce rates by campaign graphing-->
     <script type="text/javascript" src="js/bounceRatesByCampaign.js"></script>
+    <!-- daily transfers-->
+    <script type="text/javascript" src="js/transfers.js"></script>
     
   </body>
 </html>

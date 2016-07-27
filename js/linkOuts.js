@@ -41,3 +41,16 @@ $('.panel-footer-dau, .panel-footer-avg-events, .panel-footer-mau').click(functi
 	    var mp_url_segmentation = mp_url_platform + "/segmentation/#action:segment,arb_event:"
 	    window.open(mp_url_segmentation)
 })
+$('#transfer-amounts-header').click(function(){
+	var mp_url_platform =   window.document.referrer.split('/mpplatform')[0]
+	    console.log(mp_url_platform)
+	    var mp_url_segmentation = mp_url_platform + "/segmentation/#action:average,arb_event:'Transfer%20Sent%20Sucessfully',bool_op:and,chart_analysis_type:linear,chart_type:line,from_date:-29,ms_checked:('Transfer%20Sent%20Sucessfully':!t),ms_values:!('Transfer%20Sent%20Sucessfully'),segfilter:!((dropdown_tab_index:0,property:(name:'Transfer%20Amount',source:properties,type:number),selected_property_type:number,type:number)),segment_type:number,to_date:0,type:general,unit:day"
+	    window.open(mp_url_segmentation)
+})
+$('#returning-users-header').click(function(){
+	var mp_url_platform =   window.document.referrer.split('/mpplatform')[0]
+	    console.log(mp_url_platform)
+	    var mp_url_segmentation = mp_url_platform + "/segmentation/#action:segment,arb_event:'$custom_event:199259',bool_op:and,chart_analysis_type:linear,chart_type:line,from_date:-29,ms_checked:('$custom_event:199259':!t),ms_values:!('$custom_event:199259'),to_date:0,type:general,unit:day"
+	    window.open(mp_url_segmentation)
+})
+
