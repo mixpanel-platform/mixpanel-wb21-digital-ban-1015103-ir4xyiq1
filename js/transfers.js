@@ -4,7 +4,7 @@ MP.api.segment('Transfer Sent Sucessfully', {from: moment().subtract(30, 'days')
     var transferData = transferResults.values()
     var transferChart = $('#transfer-graph').MPChart({chartType: 'line', highchartsOptions: {  // Create a line chart
       legend: {
-        enabled: false,
+        enabled: true,
         y:-7
       },
     }});                                
@@ -48,30 +48,24 @@ var maxParams = {
     
 };
 
-
+//get averages
 MP.api.segment('Transfer Sent Sucessfully', avgparams).done(function(avgTransferResults) {
-	transferData = {}
-	//get averages
-	console.log('avg trans', avgTransferResults.values())
-	var avgTransfers  = {}
-	avgTransferResults['Average Transfer Amount'] = avgTransferResults.values()
+	//get max
 	MP.api.segment('Transfer Sent Sucessfully', minParams).done(function(minTransferResults) {
-		//get averages
+		//get min
 		console.log('min trans', minTransferResults.values())
-		var avgTransfers  = {}
-		avgTransferResults['Min Transfer Amount'] = minTransferResults.values()
 		MP.api.segment('Transfer Sent Sucessfully', maxParams).done(function(maxTransferResults) {
 			//get averages
 			console.log('max trans', maxTransferResults.values())
-			var avgTransfers  = {}
-			avgTransferResults['Max Transfer Amount'] = maxTransferResults.values()
+			var transferData  = {}
+			//combine data for graphing
 			transferData['Max Transfer Amount'] = maxTransferResults.values()
 			transferData['Min Transfer Amount'] = minTransferResults.values()
 			transferData['Average Transfer Amount'] = avgTransferResults.values()
 			var transferAmountChart = $('#transfer-amounts-graph').MPChart({chartType: 'line', highchartsOptions: {  // Create a line chart
 		      legend: {
-		        enabled: false,
-		        y:-7
+		        enabled: true,
+		        y:-15
 		      },
 		    }});
 		 $("#transfer-amount-header").show()           //display chart header

@@ -8,7 +8,7 @@
     <!--mixpanel tracking-->
     <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
       for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-      mixpanel.init("63984281bbf4193be761f9f9ff8592a5");</script><!-- end Mixpanel -->
+      mixpanel.init("7f1a3b0805a8087ca7086967043aa505");</script><!-- end Mixpanel -->
 
     <!--mixpanel platform -->
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
@@ -154,48 +154,7 @@
       </div>
     </div> 
     <div class="container-fluid p-t-2" id='tables-and-charts'>
-      <div class="row">
-        <div class="export-button clearfix pull-right" id="export-div" style="display:none;"">
-          <button id="export" data-export="export">Export Table</button>
-      </div>
-      <div class="row" id="table">
-        <div class="col-sm-12 m-t-4 clearfix marketing-div">
-          <table class="table table-bordered tablesorter" id="marketing-table">
-          </table>
-        </div>
-      </div>
-      <div class="row">
-        <div class="m-y-5 clearfix col-sm-12" id='selectors'>
-          <div class="clearfix pull-left">
-            <div id="table-edit"  style="disply:none;"><button class="btn edit-table-btn" id="table-edit-button">Edit Table Events</button></div>
-            <div class="col-sm-6 text-uppercase text-muted " id="selector-text" style="display:none"><u><b>Event to remove:</b></u></div>            
-            <div class="col-sm-6" id="new-event" style="display:none;"></div>
-            <div class="col-sm-6" id="table-selector" style="display:none;"></div>
-
-          </div>
-          <!-- pager -->
-          <div class="dropdown">
-            <div id="pager" class="pager clearfix pull-right">
-              <form style="disply:none" id="pager-controls">
-                <img src="img/chapter_previous.png" class="first table-control" id="table-controls" />
-                <img src="img/previous.png" class="prev" id="table-controls"/>
-                <span class="pagedisplay"></span> <!-- this can be any element, including an input -->
-                <img src="img/next.png" class="next" id="table-controls"/>
-                <img src="img/chapter_next.png" class="last" id="table-controls"/>
-                <select class="pagesize">
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                  <option value="20">20</option>
-                  <option value="30">30</option>
-                  <option value="50">50</option>
-                  <option value="all">All Rows</option>
-                </select>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+      <!-- start graphs -->
       <div class='row' id='headers'>
         <div class="col-sm-6">
           <h4 class="text-center  text-muted" id="dau-chart-header" style="display: none"><u>Daily Active Users</u></h4>
@@ -204,7 +163,7 @@
           <h4 class="text-center text-muted" id="mau-chart-header" style="display: none"><u>Monthly Active Users</u></h4>
         </div>
       </div>
-      <div class='row'>
+      <div class='row' id='dau-mau-grapsh'>
         <div class="col-sm-6">
           <div id='dau-chart'></div>
         </div>
@@ -212,15 +171,79 @@
           <div id='mau-chart'></div>
         </div>
       </div>
-      <div class="row">
         <div class="row" id="headers">
           <div class="col-sm-12">
             <h4 class="text-center text-muted" id="returning-users-header" style="diplay: none;"><u>Returing Users</u></h4>
+          </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id='returning-users-graph'></div>
+          </div>
+        </div>
+        <div class='row' id='headers'>
+          <div class="col-sm-6">
+            <h4 class="text-center text-muted" id="transfer-header" style="diplay: none;"><u>Daily Transfers</u></h4>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-center text-muted" id="transfer-amounts-header" style="diplay: none;"><u>Daily Transfer Amounts</u></h4>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col-sm-6">
+            <div id='transfer-graph'></div>
+          </div>
+          <div class="col-sm-6">
+            <div id='transfer-amounts-graph'></div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
             <div id='returning-users-graph'></div>
+          </div>
+        </div>
+        <div clas='row'>
+          <div class="col-sm-12">
+            <h4 class='text-center text-muted'><u>Marketing</u></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="export-button clearfix pull-right" id="export-div" style="display:none;"">
+            <button id="export" data-export="export">Export Table</button>
+        </div>
+        <div class="row" id="table">
+          <div class="col-sm-12 m-t-4 clearfix marketing-div">
+            <table class="table table-bordered tablesorter" id="marketing-table">
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="m-y-5 clearfix col-sm-12" id='selectors'>
+            <div class="clearfix pull-left">
+              <div id="table-edit"  style="disply:none;"><button class="btn edit-table-btn" id="table-edit-button">Edit Table Events</button></div>
+              <div class="col-sm-6 text-uppercase text-muted " id="selector-text" style="display:none"><u><b>Event to remove:</b></u></div>            
+              <div class="col-sm-6" id="new-event" style="display:none;"></div>
+              <div class="col-sm-6" id="table-selector" style="display:none;"></div>
+            </div>
+            <!-- pager -->
+            <div class="dropdown">
+              <div id="pager" class="pager clearfix pull-right">
+                <form style="disply:none" id="pager-controls">
+                  <img src="img/chapter_previous.png" class="first table-control" id="table-controls" />
+                  <img src="img/previous.png" class="prev" id="table-controls"/>
+                  <span class="pagedisplay"></span> <!-- this can be any element, including an input -->
+                  <img src="img/next.png" class="next" id="table-controls"/>
+                  <img src="img/chapter_next.png" class="last" id="table-controls"/>
+                  <select class="pagesize">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="all">All Rows</option>
+                  </select>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row" id="headers">
@@ -252,28 +275,8 @@
           <div class="col-sm-12">
             <div id='campaign-bounce-rate'></div>
           </div>
-        </div>
-        <div class="row" id="headers">
-          <div class="col-sm-12">
-            <h4 class="text-center text-muted" id="transfer-header" style="diplay: none;"><u>Daily Transfers</u></h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div id='transfer-graph'></div>
-          </div>
-        </div> 
-        <div class="row" id="headers">
-          <div class="col-sm-12">
-            <h4 class="text-center text-muted" id="transfer-amounts-header" style="diplay: none;"><u>Daily Transfer Amounts</u></h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div id='transfer-amounts-graph'></div>
-          </div>
-        </div>    
-      </div>      
+        </div>   
+    
     </div>
   </div>
   <!--dialogue modal for entering revenue-->

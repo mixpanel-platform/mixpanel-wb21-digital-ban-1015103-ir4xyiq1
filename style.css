@@ -47,7 +47,7 @@
 /*end header panels*/
 
 /*hide legend on mpChart for style reasons*/
-#dau-chart .mixpanel-platform-multi_selector, #mau-chart .mixpanel-platform-multi_selector, #avg-events-per-user-per-day-chart .mixpanel-platform-multi_selector {
+#dau-chart .mixpanel-platform-multi_selector, #mau-chart .mixpanel-platform-multi_selector, #avg-events-per-user-per-day-chart .mixpanel-platform-multi_selector, #returning-users-graph .mixpanel-platform-multi_selector, #transfer-graph .mixpanel-platform-multi_selector, #transfer-amounts-graph .mixpanel-platform-multi_selector{
     display: none;
 }
 
