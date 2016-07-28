@@ -53,4 +53,10 @@ $('#returning-users-header').click(function(){
 	    var mp_url_segmentation = mp_url_platform + "/segmentation/#action:segment,arb_event:'$custom_event:199259',bool_op:and,chart_analysis_type:linear,chart_type:line,from_date:-29,ms_checked:('$custom_event:199259':!t),ms_values:!('$custom_event:199259'),to_date:0,type:general,unit:day"
 	    window.open(mp_url_segmentation)
 })
+$('#new-accounts-header').click(function(){
+	var mp_url_platform =   window.document.referrer.split('/mpplatform')[0]
+	    console.log(mp_url_platform)
+	    var mp_url_segmentation = mp_url_platform + "/segmentation/#action:segment,arb_event:'$custom_event:199661',bool_op:and,chart_analysis_type:linear,chart_type:line,from_date:-29,ms_checked:('$custom_event:199661':!t),ms_values:!('$custom_event:199661'),to_date:0,type:general,unit:day"
+	    window.open(mp_url_segmentation)
+})
 

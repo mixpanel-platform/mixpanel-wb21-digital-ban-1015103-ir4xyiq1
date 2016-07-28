@@ -171,14 +171,22 @@
           <div id='mau-chart'></div>
         </div>
       </div>
-        <div class="row" id="headers">
-          <div class="col-sm-12">
-            <h4 class="text-center text-muted" id="returning-users-header" style="diplay: none;"><u>Returing Users</u></h4>
+        <div class='row' id='headers'>
+          <div class="col-sm-6">
+            <h4 class="text-center text-muted" id="returning-users-header" style="diplay: none;"><u>Returning Users</u></h4>
           </div>
-        <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-6">
+            <h4 class="text-center text-muted" id="new-accounts-header" style="diplay: none;"><u>New Accounts</u></h4>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col-sm-6">
             <div id='returning-users-graph'></div>
           </div>
+          <div class="col-sm-6">
+            <div id='new-accounts-graph'></div>
+          </div>
+        </div>
         </div>
         <div class='row' id='headers'>
           <div class="col-sm-6">
@@ -586,9 +594,8 @@
     <script type="text/javascript" src="js/bounceRatesByCampaign.js"></script>
     <!-- daily transfers-->
     <script type="text/javascript" src="js/transfers.js"></script>
-    <script type="text/javascript">
-      $('#hide').hide()
-    </script>
+    <!-- New Accounts-->
+    <script type="text/javascript" src="js/newAccounts.js"></script>
     
   </body>
 </html>
