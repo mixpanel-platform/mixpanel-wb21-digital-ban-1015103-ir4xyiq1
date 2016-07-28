@@ -66,7 +66,7 @@ MP.api.segment('Transfer Sent Sucessfully', avgparams).done(function(avgTransfer
 		      legend: {
 		        enabled: true,
 		        y:-15
-		      },
+		      }
 		    }});
 		 $("#transfer-amount-header").show()           //display chart header
 		 transferAmountChart.MPChart('setData', transferData); // Set the chart's data

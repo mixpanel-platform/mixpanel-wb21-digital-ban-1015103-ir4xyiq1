@@ -68,13 +68,13 @@ params).done(function(bounceResults){
     })
     
 
-  var mauChart = $('#campaign-bounce-rate').MPChart({chartType: 'line', highchartsOptions: {
+  var bounceGraph = $('#campaign-bounce-rate').MPChart({chartType: 'line', highchartsOptions: {
     legend: {
       enabled: false,
       y: -7
     }
   }});                                // Create a line chart
-  mauChart.MPChart('setData', graphingData); // Set the chart's data
+  bounceGraph.MPChart('setData', graphingData); // Set the chart's data
   
   })//end of second jql query
 }) // end of first jql query
