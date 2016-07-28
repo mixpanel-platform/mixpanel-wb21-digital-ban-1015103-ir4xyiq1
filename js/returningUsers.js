@@ -12,8 +12,11 @@ MP.api.segment("View Page", params).done(function(results){
 	var returningUsersChart = $('#returning-users-graph').MPChart({chartType: 'line', highchartsOptions: {  // Create a line chart
       legend: {
         enabled: true,
-        y:-7
-      },
+        y:-7,
+        labelFormatter: function () {
+	  	return 'Returning Users Count'
+	  	}
+      }
     }});                                
     returningUsersChart.MPChart('setData', results.values()); // Set the chart's data
 	$("#returning-users-header").show()           //display chart header

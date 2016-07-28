@@ -246,7 +246,7 @@
             </div>
           </div>
         </div>
-        <div class="row" id="headers">
+<!--         <div class="row" id="headers hide">
           <div class="col-sm-12">
             <h4 class="text-center text-muted" id="avg-campaign-header" style="diplay: none;"><u>Avg. Events Per User By Campaign</u></h4>
           </div>
@@ -265,7 +265,7 @@
           <div class="col-sm-12">
             <div id='avg-events-per-user-per-day-chart'></div>
           </div>
-        </div>
+        </div> -->
         <div class="row" id="headers">
           <div class="col-sm-12">
             <h4 class="text-center text-muted" id="avg-per-user-header" style="diplay: none;"><u>Campaign Bounce Rate</u></h4>
@@ -276,7 +276,6 @@
             <div id='campaign-bounce-rate'></div>
           </div>
         </div>   
-    
     </div>
   </div>
   <!--dialogue modal for entering revenue-->
@@ -578,15 +577,18 @@
     <!-- returning Users-->
     <script type="text/javascript" src="js/returningUsers.js"></script>
     <!-- link to avg events per user per campaign per day graphing -->
-    <script type="text/javascript" src="js/avgEventsPerCampaingGraphing.js"></script>
+    <!-- <script type="text/javascript" src="js/avgEventsPerCampaingGraphing.js"></script> -->
     <!-- avg events per user per day graphing -->
-    <script type="text/javascript" src="js/avgEventsPerUserPerDay.js"></script>
+    <!-- <script type="text/javascript" src="js/avgEventsPerUserPerDay.js"></script> -->
     <!-- link to enable changing of events in table -->
     <script type="text/javascript" src="js/tableEdit.js"></script>
     <!-- bounce rates by campaign graphing-->
     <script type="text/javascript" src="js/bounceRatesByCampaign.js"></script>
     <!-- daily transfers-->
     <script type="text/javascript" src="js/transfers.js"></script>
+    <script type="text/javascript">
+      $('#hide').hide()
+    </script>
     
   </body>
 </html>
